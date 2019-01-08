@@ -34,6 +34,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.picWait = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -47,6 +49,7 @@
             // 
             // btnEnter
             // 
+            this.btnEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEnter.Location = new System.Drawing.Point(24, 111);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
@@ -89,11 +92,25 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // picWait
+            // 
+            this.picWait.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picWait.Image = global::Encoder808.Properties.Resources.wait;
+            this.picWait.Location = new System.Drawing.Point(24, 111);
+            this.picWait.Name = "picWait";
+            this.picWait.Size = new System.Drawing.Size(75, 23);
+            this.picWait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picWait.TabIndex = 6;
+            this.picWait.TabStop = false;
+            this.picWait.UseWaitCursor = true;
+            this.picWait.Visible = false;
+            // 
             // Loginfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(221, 170);
+            this.Controls.Add(this.picWait);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
@@ -107,6 +124,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ورود";
             this.Load += new System.EventHandler(this.Loginfrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +138,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox picWait;
     }
 }

@@ -28,7 +28,7 @@ namespace Encoder808.Classes
                     version = "1"
                 };
 
-                var data = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(model));
+                var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model));
 
                 request.Method = "POST";
                 request.ContentType = contentType;
@@ -64,7 +64,6 @@ namespace Encoder808.Classes
             try
             {
                 var url = baseUrl + "/encrypted_film";
-                url = "http://localhost:3900" + "/ManageSession/encrypted_film";
                 var request = (HttpWebRequest)WebRequest.Create(url);
 
                 var model = new

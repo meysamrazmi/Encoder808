@@ -39,11 +39,15 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.outputList = new System.Windows.Forms.ListBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.picWait = new System.Windows.Forms.PictureBox();
+            this.lblText = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSourceFolder
             // 
-            this.txtSourceFolder.Location = new System.Drawing.Point(115, 32);
+            this.txtSourceFolder.Location = new System.Drawing.Point(116, 52);
             this.txtSourceFolder.Name = "txtSourceFolder";
             this.txtSourceFolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSourceFolder.Size = new System.Drawing.Size(281, 20);
@@ -53,7 +57,7 @@
             // lblSourceFolder
             // 
             this.lblSourceFolder.AutoSize = true;
-            this.lblSourceFolder.Location = new System.Drawing.Point(21, 35);
+            this.lblSourceFolder.Location = new System.Drawing.Point(22, 55);
             this.lblSourceFolder.Name = "lblSourceFolder";
             this.lblSourceFolder.Size = new System.Drawing.Size(81, 13);
             this.lblSourceFolder.TabIndex = 1;
@@ -72,7 +76,7 @@
             // lblDestinationFolder
             // 
             this.lblDestinationFolder.AutoSize = true;
-            this.lblDestinationFolder.Location = new System.Drawing.Point(21, 87);
+            this.lblDestinationFolder.Location = new System.Drawing.Point(22, 107);
             this.lblDestinationFolder.Name = "lblDestinationFolder";
             this.lblDestinationFolder.Size = new System.Drawing.Size(88, 13);
             this.lblDestinationFolder.TabIndex = 3;
@@ -81,7 +85,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(21, 139);
+            this.lblTitle.Location = new System.Drawing.Point(22, 159);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(75, 13);
             this.lblTitle.TabIndex = 4;
@@ -90,7 +94,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(230, 136);
+            this.lblCode.Location = new System.Drawing.Point(231, 156);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(60, 13);
             this.lblCode.TabIndex = 5;
@@ -98,7 +102,7 @@
             // 
             // txtDestinationFolder
             // 
-            this.txtDestinationFolder.Location = new System.Drawing.Point(115, 84);
+            this.txtDestinationFolder.Location = new System.Drawing.Point(116, 104);
             this.txtDestinationFolder.Name = "txtDestinationFolder";
             this.txtDestinationFolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDestinationFolder.Size = new System.Drawing.Size(281, 20);
@@ -107,14 +111,14 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(115, 132);
+            this.txtTitle.Location = new System.Drawing.Point(116, 152);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(100, 20);
             this.txtTitle.TabIndex = 7;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(296, 136);
+            this.txtCode.Location = new System.Drawing.Point(297, 156);
             this.txtCode.Name = "txtCode";
             this.txtCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCode.Size = new System.Drawing.Size(100, 20);
@@ -138,11 +142,45 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // picWait
+            // 
+            this.picWait.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picWait.Image = global::Encoder808.Properties.Resources.wait;
+            this.picWait.Location = new System.Drawing.Point(24, 190);
+            this.picWait.Name = "picWait";
+            this.picWait.Size = new System.Drawing.Size(75, 23);
+            this.picWait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picWait.TabIndex = 11;
+            this.picWait.TabStop = false;
+            this.picWait.UseWaitCursor = true;
+            this.picWait.Visible = false;
+            // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Location = new System.Drawing.Point(22, 9);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(64, 13);
+            this.lblText.TabIndex = 12;
+            this.lblText.Text = "نام کاربری :";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(92, 9);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(64, 13);
+            this.lblUsername.TabIndex = 13;
+            this.lblUsername.Text = "نام کاربری :";
+            // 
             // Mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 632);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblText);
+            this.Controls.Add(this.picWait);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.outputList);
             this.Controls.Add(this.txtCode);
@@ -161,6 +199,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mainfrm";
             this.Load += new System.EventHandler(this.Mainfrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +218,8 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.ListBox outputList;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox picWait;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.Label lblUsername;
     }
 }
