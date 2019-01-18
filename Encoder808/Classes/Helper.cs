@@ -17,18 +17,19 @@ namespace Encoder808.Classes
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-        private static SymmetricAlgorithm _algorithm = new RijndaelManaged();
 
         public static byte[] EncryptData(byte[] data, string password)
         {
             try
             {
-                GetKey(password);
+                SymmetricAlgorithm _algorithm = new RijndaelManaged();
+                GetKey(password, ref _algorithm);
 
                 ICryptoTransform encryptor = _algorithm.CreateEncryptor();
 
                 byte[] cryptoData = encryptor.TransformFinalBlock(data, 0, data.Length);
-
+                _algorithm.Dispose();
+                encryptor.Dispose();
                 return cryptoData;
             }
             catch (Exception ex)
@@ -42,12 +43,15 @@ namespace Encoder808.Classes
         {
             try
             {
-                GetKey(password);
+                SymmetricAlgorithm _algorithm = new RijndaelManaged();
+
+                GetKey(password,ref _algorithm);
 
                 ICryptoTransform decryptor = _algorithm.CreateDecryptor();
 
                 byte[] data = decryptor.TransformFinalBlock(cryptoData, 0, cryptoData.Length);
-
+                _algorithm.Dispose();
+                decryptor.Dispose();
                 return data;
             }
             catch (Exception ex)
@@ -57,7 +61,7 @@ namespace Encoder808.Classes
 
         }
 
-        private static void GetKey(string password)
+        private static void GetKey(string password,ref SymmetricAlgorithm _algorithm)
         {
             byte[] salt = new byte[8];
 

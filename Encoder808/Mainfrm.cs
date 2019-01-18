@@ -141,7 +141,10 @@ namespace Encoder808
             ProcessApp(code, title, sourcePath, destinationPath);
 
             AddToListResult("پایان فرایند کد کردن");
-
+            GC.Collect(0);
+            GC.Collect(1);
+            GC.Collect(2);
+            GC.WaitForPendingFinalizers();
         }
         private void bckWrkr_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {

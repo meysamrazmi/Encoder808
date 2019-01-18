@@ -12,6 +12,9 @@ namespace Encoder808.Classes
     {
         private static string baseUrl = "https://civil808.com/desktop";
         private static string contentType = "application/json";
+        private static string source = "desktop";
+        private static string version = "1";
+
         public static UserLogin login(string username_email, string password)
         {
             try
@@ -24,8 +27,8 @@ namespace Encoder808.Classes
                     hash = "50e185c2e0c2bc30215338db776022c92ecbc441fd933688c6bf4f274c863c60",
                     username_email,
                     password,
-                    source = "desktop",
-                    version = "1"
+                    source,
+                    version
                 };
 
                 var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model));
@@ -69,8 +72,8 @@ namespace Encoder808.Classes
                 var model = new
                 {
                     hash = "50ae6fb9675dd999fa93af9d23ac619bf2ccb23af3047824cef6a84d5b41faa1",
-                    source = "desktop",
-                    version = "1",
+                    source ,
+                    version ,
                     encryptedFilm.nid,
                     encryptedFilm.password,
                     encryptedFilm.title,
