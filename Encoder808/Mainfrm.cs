@@ -17,7 +17,7 @@ namespace Encoder808
     public partial class Mainfrm : Form
     {
         delegate void InvokeDelegate();
-        UserLogin userLogin = null;
+        public static UserLogin userLogin = null;
         string newExt = ".bin";
         string Data;
         BackgroundWorker bckWrkr = new BackgroundWorker();
@@ -249,6 +249,12 @@ namespace Encoder808
             foreach (var directoryItem in directories)
                 ProcessApp(code, title, directoryItem.FullName + "\\", Path.Combine(destinationPath, directoryItem.Name + "\\"));
 
+        }
+
+        private void btnPublish_Click(object sender, EventArgs e)
+        {
+            var managePublishfrm = new ManagePublishfrm();
+            managePublishfrm.ShowDialog();
         }
     }
 }

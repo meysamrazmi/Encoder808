@@ -105,6 +105,7 @@
     <Compile Include="Classes\Profile.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserLogin.cs" />
+    <Compile Include="Classes\Version.cs" />
     <Compile Include="Classes\WebService.cs" />
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
@@ -118,13 +119,28 @@
     <Compile Include="Mainfrm.Designer.cs">
       <DependentUpon>Mainfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagePublishfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePublishfrm.Designer.cs">
+      <DependentUpon>ManagePublishfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publishfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Publishfrm.Designer.cs">
+      <DependentUpon>Publishfrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Loginfrm.resx">
       <DependentUpon>Loginfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainfrm.resx">
       <DependentUpon>Mainfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePublishfrm.resx">
+      <DependentUpon>ManagePublishfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Publishfrm.resx">
+      <DependentUpon>Publishfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Encoder808_TemporaryKey.pfx" />
     <None Include="packages.config" />

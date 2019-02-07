@@ -42,6 +42,7 @@
             this.picWait = new System.Windows.Forms.PictureBox();
             this.lblText = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.btnPublish = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picWait)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,11 +174,22 @@
             this.lblUsername.TabIndex = 13;
             this.lblUsername.Text = "نام کاربری :";
             // 
+            // btnPublish
+            // 
+            this.btnPublish.Location = new System.Drawing.Point(291, 9);
+            this.btnPublish.Name = "btnPublish";
+            this.btnPublish.Size = new System.Drawing.Size(121, 23);
+            this.btnPublish.TabIndex = 14;
+            this.btnPublish.Text = "مدیریت پابلیش";
+            this.btnPublish.UseVisualStyleBackColor = true;
+            this.btnPublish.Click += new System.EventHandler(this.btnPublish_Click);
+            // 
             // Mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 632);
+            this.Controls.Add(this.btnPublish);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.picWait);
@@ -221,5 +233,6 @@
         private System.Windows.Forms.PictureBox picWait;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Button btnPublish;
     }
 }
