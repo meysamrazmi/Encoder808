@@ -71,7 +71,7 @@
             // mstxtVersion
             // 
             this.mstxtVersion.Location = new System.Drawing.Point(84, 28);
-            this.mstxtVersion.Mask = "0.0.0";
+            this.mstxtVersion.Mask = "0.0.0.0";
             this.mstxtVersion.Name = "mstxtVersion";
             this.mstxtVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mstxtVersion.Size = new System.Drawing.Size(100, 20);

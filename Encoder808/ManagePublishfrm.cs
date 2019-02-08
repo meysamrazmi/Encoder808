@@ -27,9 +27,6 @@ namespace Encoder808
             try
             {
                 var result = Encoder808.Classes.WebService.getAllVersion();
-                //listPublish.DisplayMember = "vid - description";
-                //listPublish.ValueMember = "id";
-                //listPublish.DataSource = result.versions;
                 foreach (Classes.Version item in result.versions)
                 {
                     listPublish.Items.Add(item.vid + "_" + item.description);
