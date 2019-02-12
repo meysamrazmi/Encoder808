@@ -26,6 +26,7 @@ namespace Encoder808
         {
             try
             {
+                listPublish.Items.Clear();
                 var result = Encoder808.Classes.WebService.getAllVersion();
                 foreach (Classes.Version item in result.versions)
                 {
@@ -44,6 +45,7 @@ namespace Encoder808
         {
             var frm = new Publishfrm(true, string.Empty);
             frm.ShowDialog();
+            fillGridView();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace Encoder808
             }
             var frm = new Publishfrm(false, version);
             frm.ShowDialog();
+            fillGridView();
         }
 
         private void btnDetail_Click(object sender, EventArgs e)
@@ -68,6 +71,7 @@ namespace Encoder808
             }
             var frm = new Publishfrm(null, version);
             frm.ShowDialog();
+            fillGridView();
         }
 
         string getVersionOfPublishList()
